@@ -1,0 +1,142 @@
+$primary: #0069d9;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #fdfdfd;
+$dark: #343a40;
+$link: #007bff; // Text color
+
+.btn{
+  border-radius: 0.2rem;
+  color: #333;
+  font-size: 1.2rem;
+  height: 3.0rem;
+  line-height: 3.0rem;
+  vertical-align: middle;
+  border: none;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  &.btn-shadow{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  &.btn-primary{
+    background-color: $primary;
+    color: #fff;
+    &:hover{
+      background-color: lighten($primary, 10%);
+    }
+  }
+  &.btn-secondary{
+    background-color: $secondary;
+    color: #fff;
+    &:hover{
+      background-color: lighten($secondary, 10%);
+    }
+  }
+  &.btn-success{
+    background-color: $success;
+    color: #fff;
+    &:hover{
+      background-color: lighten($success, 10%);
+    }
+  }
+  &.btn-danger{
+    background-color: $danger;
+    color: #fff;
+    &:hover{
+      background-color: lighten($danger, 10%);
+    }
+  }
+  &.btn-warning{
+    background-color: $warning;
+    color: #fff;
+    &:hover{
+      background-color: lighten($warning, 10%);
+    }
+  }
+  &.btn-info{
+    background-color: $info;
+    color: #fff;
+    &:hover{
+      background-color: lighten($info, 10%);
+    }
+  }
+  &.btn-light{
+    background-color: $light;
+    color: #777;
+    &:hover{
+      background-color: lighten($light, 10%);
+    }
+  }
+  &.btn-dark{
+    background-color: $dark;
+    color: #fff;
+    &:hover{
+      background-color: lighten($dark, 10%);
+    }
+  }
+  &.btn-link{
+    color: $link;
+    &.btn-shadow{
+      background-color: #fff;
+    }
+    &:hover{
+      color: lighten($link, 10%);
+      text-decoration: underline;
+    }
+  }
+  // Button state
+  &.btn-status-loading, &.btn-status-success, &.btn-status-error{
+    padding-right: 3.0rem;
+    &:after{
+      content: "";
+      position: absolute;
+      width: 2.0rem;
+      height: 2.0rem;
+      line-height: 2.0rem;
+      vertical-align: middle;
+      top: 50%;
+      margin-top: -1.0rem;
+      right: 0.7rem;
+      font-family: "Material Icons";
+    }
+  }
+  &.btn-status-loading{
+    &:after{
+      background-image: url('./loading.svg');
+      background-repeat: no-repeat;
+    }
+  }
+  &.btn-status-success{
+    background-color: $success;
+    color: #fff;
+    &:hover{
+      background-color: lighten($success, 10%);
+    }
+    &:after{
+      content: "\e5ca";
+    }
+  }
+  &.btn-status-error{
+    background-color: $danger;
+    color: #fff;
+    &:hover{
+      background-color: lighten($danger, 10%);
+    }
+    &:after{
+      content: "\e5cd";
+    }
+  }
+}
