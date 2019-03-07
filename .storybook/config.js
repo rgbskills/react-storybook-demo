@@ -23,5 +23,4 @@ const newViewports = {
 };
 
 addParameters({ viewport: { defaultViewport: 'responsive', viewports: newViewports }});
-
 configure(loadStories, module);

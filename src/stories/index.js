@@ -1,13 +1,16 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import Button from '../components/button/Button';
 import ButtonFlow from '../components/buttonFlow/ButtonFlow';
 import App from '../App';
+import Widget from '../components/widget/Widget';
 import './storybook.scss';
 storiesOf('app', module).add('Default', () => <App />);
 
 storiesOf('Button', module)
+.addDecorator(withInfo)
 .add('Simple', () => 
   <div className="storybook-btn">
     <h2>Primary:</h2>
@@ -93,58 +96,64 @@ storiesOf('Button', module)
   </div>
 )
 .add('success', () => 
-<div className="storybook-btn">
-<h2>Primary:</h2>
-<Button status="success" theme="primary" label="primary" />
-<Button status="success" theme="primary" label="primary" shadow={true} />
-<h2>Secondary:</h2>
-<Button status="success" theme="secondary" label="secondary" />
-<Button status="success" theme="secondary" label="secondary" shadow={true} />
-<h2>Success:</h2>
-<Button status="success" theme="success" label="success" />
-<Button status="success" theme="success" label="success" shadow={true} />
-<h2>Warning:</h2>
-<Button status="success" theme="warning" label="warning" />
-<Button status="success" theme="warning" label="warning" shadow={true} />
-<h2>Info:</h2>
-<Button status="success" theme="info" label="info" />
-<Button status="success" theme="info" label="info" shadow={true} />
-<h2>Light:</h2>
-<Button status="success" theme="light" label="light" />
-<Button status="success" theme="light" label="light" shadow={true} />
-<h2>Dark:</h2>
-<Button status="success" theme="dark" label="dark" />
-<Button status="success" theme="dark" label="dark" shadow={true} />
-<h2>Link:</h2>
-<Button status="success" theme="link" label="link" />
-<Button status="success" theme="link" label="link" shadow={true} />
-</div>
+  <div className="storybook-btn">
+    <h2>Primary:</h2>
+    <Button status="success" theme="primary" label="primary" />
+    <Button status="success" theme="primary" label="primary" shadow={true} />
+    <h2>Secondary:</h2>
+    <Button status="success" theme="secondary" label="secondary" />
+    <Button status="success" theme="secondary" label="secondary" shadow={true} />
+    <h2>Success:</h2>
+    <Button status="success" theme="success" label="success" />
+    <Button status="success" theme="success" label="success" shadow={true} />
+    <h2>Warning:</h2>
+    <Button status="success" theme="warning" label="warning" />
+    <Button status="success" theme="warning" label="warning" shadow={true} />
+    <h2>Info:</h2>
+    <Button status="success" theme="info" label="info" />
+    <Button status="success" theme="info" label="info" shadow={true} />
+    <h2>Light:</h2>
+    <Button status="success" theme="light" label="light" />
+    <Button status="success" theme="light" label="light" shadow={true} />
+    <h2>Dark:</h2>
+    <Button status="success" theme="dark" label="dark" />
+    <Button status="success" theme="dark" label="dark" shadow={true} />
+    <h2>Link:</h2>
+    <Button status="success" theme="link" label="link" />
+    <Button status="success" theme="link" label="link" shadow={true} />
+  </div>
 )
 .add('error', () => 
-<div className="storybook-btn">
-<h2>Primary:</h2>
-<Button status="error" theme="primary" label="primary" />
-<Button status="error" theme="primary" label="primary" shadow={true} />
-<h2>Secondary:</h2>
-<Button status="error" theme="secondary" label="secondary" />
-<Button status="error" theme="secondary" label="secondary" shadow={true} />
-<h2>Success:</h2>
-<Button status="error" theme="success" label="success" />
-<Button status="error" theme="success" label="success" shadow={true} />
-<h2>Warning:</h2>
-<Button status="error" theme="warning" label="warning" />
-<Button status="error" theme="warning" label="warning" shadow={true} />
-<h2>Info:</h2>
-<Button status="error" theme="info" label="info" />
-<Button status="error" theme="info" label="info" shadow={true} />
-<h2>Light:</h2>
-<Button status="error" theme="light" label="light" />
-<Button status="error" theme="light" label="light" shadow={true} />
-<h2>Dark:</h2>
-<Button status="error" theme="dark" label="dark" />
-<Button status="error" theme="dark" label="dark" shadow={true} />
-<h2>Link:</h2>
-<Button status="error" theme="link" label="link" />
-<Button status="error" theme="link" label="link" shadow={true} />
-</div>
+  <div className="storybook-btn">
+    <h2>Primary:</h2>
+    <Button status="error" theme="primary" label="primary" />
+    <Button status="error" theme="primary" label="primary" shadow={true} />
+    <h2>Secondary:</h2>
+    <Button status="error" theme="secondary" label="secondary" />
+    <Button status="error" theme="secondary" label="secondary" shadow={true} />
+    <h2>Success:</h2>
+    <Button status="error" theme="success" label="success" />
+    <Button status="error" theme="success" label="success" shadow={true} />
+    <h2>Warning:</h2>
+    <Button status="error" theme="warning" label="warning" />
+    <Button status="error" theme="warning" label="warning" shadow={true} />
+    <h2>Info:</h2>
+    <Button status="error" theme="info" label="info" />
+    <Button status="error" theme="info" label="info" shadow={true} />
+    <h2>Light:</h2>
+    <Button status="error" theme="light" label="light" />
+    <Button status="error" theme="light" label="light" shadow={true} />
+    <h2>Dark:</h2>
+    <Button status="error" theme="dark" label="dark" />
+    <Button status="error" theme="dark" label="dark" shadow={true} />
+    <h2>Link:</h2>
+    <Button status="error" theme="link" label="link" />
+    <Button status="error" theme="link" label="link" shadow={true} />
+  </div>
+)
+
+storiesOf('Widget', module)
+.addDecorator(withInfo)
+.add('Simple', () => 
+  <Widget />
 )
